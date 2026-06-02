@@ -117,13 +117,19 @@ vercel env add TOKEN_ADDRESS production
 vercel env add ETHERSCAN_API_KEY production
 ```
 
-3) คำสั่งช่วยตั้งค่าแบบตัวอย่าง (ไม่มีการส่งค่าใดๆ โดยอัตโนมัติ):
+3) ใช้สคริปต์ช่วยตั้งค่า GitHub secrets แบบอัตโนมัติ เมื่อมีตัวแปรใน environment:
+
+```bash
+bash scripts/setup-deploy.sh
+```
+
+4) คำสั่งช่วยตั้งค่าแบบตัวอย่าง (ไม่มีการส่งค่าใดๆ โดยอัตโนมัติ):
 
 ```bash
 bash scripts/set-secrets.sh
 ```
 
-4) เมื่อตั้งค่าเรียบร้อย ให้ push โค้ดไปยังสาขา `main` เพื่อให้ GitHub Actions ทำงานและ deploy ไปยัง Vercel
+5) เมื่อตั้งค่าเรียบร้อย ให้ push โค้ดไปยังสาขา `main` เพื่อให้ GitHub Actions ทำงานและ deploy ไปยัง Vercel
 
 ```bash
 git add .
